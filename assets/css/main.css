@@ -1823,6 +1823,15 @@ input, select, textarea {
 		border-color: rgba(255, 255, 255, 0.35);
 	}
 
+	.inputfile {
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+	}
+
 /* Button */
 	[type="file"] {
 		border: 0;
