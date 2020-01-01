@@ -1839,15 +1839,14 @@ input, select, textarea {
 	[type="file"] + label {
 		background-color: #91cbf0;
 		border-radius: 4rem;
-		color: white;
 		cursor: pointer;
 		display: inline-block;
 		height: 4rem;
 		line-height: 4rem;
 		padding-left: 3rem;
 		padding-right: 3rem;
-		margin-bottom: 3rem;
-		transition: background-color 0.3s;
+		margin-bottom: 5rem;
+		transition: background-color 0.5s;
 	}
 	
 	[type="file"]:focus + label,
@@ -2019,7 +2018,7 @@ input, select, textarea {
 			.button.primary.icon:before {
 				color: #ffffff !important;
 			}
-			
+
 	.inputfile {
 		width: 0.1px;
 		height: 0.1px;
