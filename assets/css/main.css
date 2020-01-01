@@ -1,12 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
 
-/*
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -192,6 +186,10 @@ input, select, textarea {
 			column-gap: 2em;
 			text-align: justify;
 		}
+	#about-header{
+		margin-left: 3em;
+		margin-right: 3em;
+	}
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
@@ -1802,10 +1800,11 @@ input, select, textarea {
 /* Box */
 
 	.box {
-		border-radius: 8px;
+		border-radius: 10px;
 		border: solid;
-		margin-bottom: 2em;
-		padding: 1.5em;
+		margin-bottom: 0px;
+		padding: 0px;
+		height: 15em;
 	}
 
 		.box > :last-child,
@@ -1825,7 +1824,40 @@ input, select, textarea {
 	}
 
 /* Button */
-
+	[type="file"] {
+		border: 0;
+		clip: rect(0, 0, 0, 0);
+		height: 1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute !important;
+		white-space: nowrap;
+		width: 1px; 
+	}
+	[type="file"] + label {
+		background-color: #91cbf0;
+		border-radius: 4rem;
+		color: white;
+		cursor: pointer;
+		display: inline-block;
+		height: 4rem;
+		line-height: 4rem;
+		padding-left: 3rem;
+		padding-right: 3rem;
+		margin-bottom: 3rem;
+		transition: background-color 0.3s;
+	}
+	
+	[type="file"]:focus + label,
+	[type="file"] + label:hover {
+		background-color: #b3daf1;
+	}
+	
+	[type="file"]:focus + label {
+		outline: 1px dotted rgba(255, 255, 255, 0.075);
+		outline: -webkit-focus-ring-color auto 5px;
+	}
+	
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -2724,22 +2756,22 @@ input, select, textarea {
 		}
 
 		table td {
-			padding: 0.75em 0.75em;
+			padding: 0.5em 0.5em;
 		}
 
 		table th {
 			font-size: 0.9em;
 			font-weight: 400;
-			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
+			padding: 1em 0.75em 0.75em 0.75em;
+			text-align: center;
 		}
 
 		table thead {
-			border-bottom: solid 2px;
+			border-bottom: solid 1px;
 		}
 
 		table tfoot {
-			border-top: solid 2px;
+			border-top: solid 1px;
 		}
 
 		table.alt {
