@@ -39,8 +39,28 @@
                                         <h2>Split</h2>
                                     </header>
                                     <p>Split and upload your documents to multiple cloud providers for maximum security.</p>
-                                    <input type="file" id="file" class = "inputfile"/>
-                                    <label for="file" class = "button primary">Upload Document</label>
+                                    <input type="file" id="real-file" class = "inputfile"/>
+                                    <label for = "file" class = "button primary" id = "custom-button">Upload Document</label>
+                                    <span id = "custom-text">No Document Chosen</span>
+                                    <script>
+                                        const realFileBtn = document.getElementById("real-file");
+                                        const customBtn = document.getElementById("custom-button");
+                                        const customTxt = document.getElementById("custom-text");
+
+                                        customBtn.addEventListener("click", function() {
+                                        realFileBtn.click();
+                                        });
+
+                                        realFileBtn.addEventListener("change", function() {
+                                        if (realFileBtn.value) {
+                                            customTxt.innerHTML = realFileBtn.value.match(
+                                            /[\/\\]([\w\d\s\.\-\(\)]+)$/
+                                            )[1];
+                                        } else {
+                                            customTxt.innerHTML = "No Document Chosen";
+                                        }
+                                        });
+                                    </script>
                                     <ul class="actions">
                                         <li><a href="split.html" class="button">Split</a></li>
                                     </ul>
