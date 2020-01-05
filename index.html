@@ -91,11 +91,13 @@
         
                                         $hideName = array('.','..','.DS_Store');    
         
-                                        $files = scandir($dir);
+                                        $files = scandir($dir, SCANDIR_SORT_DESCENDING);
         
                                         foreach($files as $filename) {
                                             if(!in_array($filename, $hideName)){
-                                                echo "<tr><td>$filename</td> <td><a href='combine.html' class='button primary' type = 'submit'>Combine</a></td></tr>";
+                                                echo "<form action = 'comb.php' method = 'POST'>";
+                                                echo "<tr><td>$filename</td> <td> <input type='hidden' name='filename' value='$filename' /> <input type = 'submit' value = 'Combine' class = 'button primary' /></td></tr>";
+                                                echo "</form>";
                                             }
                                         }
                                     ?>
@@ -151,7 +153,7 @@
                             <li><a href="https://github.com/joezbub" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
                         </ul>
                     </section>
-                    <p class="copyright">&copy; Law Crypt 2019</p>
+                    <p class="copyright">&copy; Law Crypt 2020</p>
                 </footer>
 
         </div>
